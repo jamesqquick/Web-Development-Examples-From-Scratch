@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide In Menu</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+
+    <nav id="navbar"> <!--included for demo purposes -->
+        <button id="menu-btn" onclick="openMenu()">Menu</button>
+
+        <div class="container">
+            <div class="brand">
+                <h1>Slide <span class="highlight">IN</span> Menu</h1>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-item active"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="slide-menu">
+        <div class="container">
+            <p class="text-right"><button id="close-btn" onclick="closeMenu()">X</button></p>
+            <div class="menu-title">
+                Menu Title
+            </div>
+            <ul class="menu-items">
+                <li class="menu-item">Home</li>
+                <li class="menu-item">About</li>
+                <li class="menu-item">Services</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

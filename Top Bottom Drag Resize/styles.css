@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+#top{
+    height: 50vh;
+    width: 100%;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid black;
+}
+
+#bottom{
+    height: 50vh;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+#top-bottom-divider{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+
+}
+
+#top-bottom-dragger{
+    background-color: black;
+    width: 25px;
+    height: 8px;
+    position: relative;
+    margin:0 auto;
+}

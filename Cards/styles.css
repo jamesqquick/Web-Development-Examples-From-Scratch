@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+    margin: 0 25px;
+}
+
+.card {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.card-header{
+    background: #F8F8F8;
+    padding: 10px 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.text-center {
+    text-align:center;
+}

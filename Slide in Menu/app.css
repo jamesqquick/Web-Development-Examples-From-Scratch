@@ -75,6 +75,7 @@ html, body{
     position: absolute;
     top: 0;
     left: 0;
+    transition: 0.5s;
 }
 
 #slide-menu.open {

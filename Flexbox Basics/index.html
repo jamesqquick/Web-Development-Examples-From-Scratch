@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Basics</title>
+    <link rel="stylesheet" type="" href="styles.css">
+</head>
+<body>
+    <h1>Flexbox Basics</h1>
+    <hr>
+    <p>Without flex container. Divs have display block and stack vertically by default. </p>
+    <div >
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <hr>
+
+    <h2>Display Flex</h2>
+
+    <p>Adding display:flex displays our boxes horizontally.  </p>
+
+    <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <hr>
+
+    <h2>Flex-Direction</h2>
+    <p>When usign Flexbox, we can choose from 
+        4 different flex-directions: row(default), column, row-reverse, column-reverse.</p>
+
+    <p>flex-direction:row(default)</p>
+    <div class="flex-container flex-direction-row">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+    
+    <p>flex-direction:column</p>
+    
+    <div class="flex-container flex-direction-column">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>Direction Column Reverse</p>
+    <div class="flex-container flex-direction-column-reverse">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>Direction Row Reverse</p>
+    <div class="flex-container flex-direction-row-reverse">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <hr>
+
+    <h2>Flex-Wrap</h2>
+    <p>By default, flexbox will try to fit all of the flex items on a given line.  Even though the items below
+        have a width set to 500px in the css, they are staying on the same line.  We can define how wrapping works
+        with flexbox by choosing one of the following flex-wrap properties: nowrap(default), wrap, wrap-reverse.
+    </p>
+
+    <p>Nowrap (default)</p>
+    <div class="flex-container ">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+    </div>
+
+    <p>Wrap</p>
+    <div class="flex-container flex-wrap">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+    </div>
+
+    <p>Wrap Reverse</p>
+    <div class="flex-container flex-wrap-reverse">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+    </div>
+
+    <hr>
+
+    <h2>Flex-Flow</h2>
+    <p>Flex-flow provides the ability to specify flex-direction and flex-wrap in one css property.  the
+        default is 'row no-wrap'
+    </p>
+
+    <p>Row and Wrap</p>
+    <div class="flex-container flex-row-and-wrap">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+    </div>
+
+    <hr>
+
+    <h2>Justify Content</h2>
+    <p>Justify Content property allows you to justify the group of flex items along the main axis (row by default or specified by flex-direction).  Justify content
+        options are as follows: flex-start, flex-end, center, space-between, space-around, space-evenly.
+    </p>
+
+    <p>flex-start</p>
+    <div class="flex-container flex-justify-content-flex-start">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>flex-enter</p>
+    <div class="flex-container flex-justify-content-flex-end">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>flex-center</p>
+    <div class="flex-container flex-justify-content-center">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>space-between</p>
+    <div class="flex-container flex-justify-content-space-between">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="flex-container flex-justify-content-space-around">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <p>space-evenly</p>
+    <div class="flex-container flex-justify-content-space-evenly">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <hr>
+    <h2>Align Items</h2>
+    <p>Align Items allows you to align flex items relative to each other along the cross-axis (opposite of the main axis).  
+        Align items options are as follows: flex-start, flex-end, center, baseline, stretch (default).  To see the effects of these
+        properties, we will need different heights for our boxes.
+    </p>
+
+    <p>flex-start</p>
+    <div class="flex-container flex-justify-content-space-evenly align-items-flex-start">
+        <div class="box ">
+            <p>Lorem ipsum dolor. </p>
+        </div>
+        <div class="box ">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <p>Lorem.</p>
+        </div>
+    </div>
+    
+    <p>flex-end</p>    
+    <div class="flex-container flex-justify-content-space-evenly align-items-flex-end">
+        <div class="box ">
+            <p>Lorem ipsum dolor. </p>
+        </div>
+        <div class="box ">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <p>Lorem.</p>
+        </div>
+    </div>
+
+    <p>center</p>
+    <div class="flex-container flex-justify-content-space-evenly align-items-center">
+        <div class="box ">
+            <p>Lorem ipsum dolor. </p>
+        </div>
+        <div class="box ">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <p>Lorem.</p>
+        </div>
+    </div>
+
+    <p>baseline</p>    
+    <div class="flex-container flex-justify-content-space-evenly align-items-baseline">
+        <div class="box ">
+            <p>Lorem ipsum dolor. </p>
+        </div>
+        <div class="box ">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <p>Lorem.</p>
+        </div>
+    </div>
+
+    <p>stretch</p>
+    <div class="flex-container flex-justify-content-space-evenly align-items-stretch">
+        <div class="box ">
+            <p>Lorem ipsum dolor. </p>
+        </div>
+        <div class="box ">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <p>Lorem.</p>
+        </div>
+    </div>
+
+
+
+
+    <hr>
+    <h2>Align Content</h2>
+    <p>Given extra space in the cross-axis (opposite of main axis), Align Content justifies the group of flex items across the cross-axis.  Note, that this has no effect unless the flex items have wrapped onto another line (you need more than 1 line of Flex Items).  Here we define a container with height of 300px and the height of each box being 50px.
+    </p>
+
+    <p>Default</p>
+    <div class="flex-container  fixed-height-container flex-wrap">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+
+    <p>flex-start</p>
+    <div class="flex-container  fixed-height-container flex-wrap align-content-flex-start">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="flex-container  fixed-height-container flex-wrap align-content-flex-end">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+
+    <p>center</p>
+    <div class="flex-container  fixed-height-container flex-wrap align-content-center">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+
+    <p>space-between</p>
+    <div class="flex-container  fixed-height-container flex-wrap align-content-space-between">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+    <p>space-around</p>
+    <div class="flex-container  fixed-height-container flex-wrap align-content-space-around">
+        <div class="box wide-box">Wide Box 1</div>
+        <div class="box wide-box">Wide Box 2</div>
+        <div class="box wide-box">Wide Box 3</div>
+        <div class="box wide-box">Wide Box 4</div>
+        <div class="box wide-box">Wide Box 5</div>
+        <div class="box wide-box">Wide Box 6</div>
+    </div>
+
+</body>
+</html>

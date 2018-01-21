@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 class="title text-center">Master/Detail</h1>
+    <div class="md-container">
+        <div class="col-3 master">
+            <div class="master-item active-item" onclick="select(this)">Option 1</div>
+            <div class="master-item" onclick="select(this)">Option 2</div>
+            <div class="master-item" onclick="select(this)">Option 3</div>
+            <div class="master-item" onclick="select(this)">Option 4</div>
+        </div>
+        <div  class="col-9 detail">
+            <button id="back-btn" class="hidden-md" onclick="back()">< Back</button>
+            <h1 class="detail-title text-center">Option 1</h1>
+        </div>
+    </div>
+
+    <script>
+        const detail = document.querySelector('.detail');
+        const detailTitle = document.querySelector('.detail-title');
+        const masterItems = document.querySelectorAll('.master-item');
+
+        function select(selected){
+            //Remove active class from all master-items
+            for(var item of masterItems){
+                item.classList.remove('active-item');
+            }
+            //Make selected tab active
+            selected.classList.add('active-item');
+            //Toggle the class that hides when the screen is medium size or less
+            detail.classList.remove('hidden-md-down');
+            //Set the content of the detail to the innerHTML of the selected item
+            detailTitle.innerHTML = selected.innerHTML;
+        }
+
+        function back(){
+            //Remove active class from all master-items
+            for(var item of masterItems){
+                item.classList.remove('active-item');
+            }
+            detail.classList.add('hidden-md-down');
+        }
+    </script>
+</body>
+</html>
